@@ -12103,7 +12103,7 @@ There are 836 test dog images.
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Question 2:</strong> This algorithmic choice necessitates that we communicate to the user that we accept human images only when they provide a clear view of a face (otherwise, we risk having unneccessarily frustrated users!). In your opinion, is this a reasonable expectation to pose on the user? If not, can you think of a way to detect humans in images that does not necessitate an image with a clearly presented face?</p>
-<p><strong>Answer:</strong></p>
+<p><strong>Answer:</strong> If the web application, in the User Interface, indicates clearly that the human face is acceptable only when there is a clear view of the face, it would help curb the risk of having unneccessarily frustrated users. A way to detect humans in images which do not necessitate an image with clear presented face could be to train a CNN with many human images in different angles and an augmented data set.</p>
 <p>We suggest the face detector from OpenCV as a potential way to detect human images in your algorithm, but you are free to explore other approaches, especially approaches that make use of deep learning :).  Please use the code cell below to design and test your own face detection algorithm.  If you decide to pursue this <em>optional</em> task, report performance on each of the datasets.</p>
 
 </div>
@@ -12506,6 +12506,15 @@ _________________________________________________________________
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The idea of having multiple layers was to extract the features from the images. To do this, the filters were halfed in each conv layer. There were max pooling layers between them. There were also dropout layers to prevent overfitting. A relu function was used in the dense layer and for the output, a softmax as it is the best for classification.</p>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
@@ -13053,6 +13062,16 @@ test_{network} = bottleneck_features['test']
 </code></pre>
 <p><strong>Question 5:</strong> Outline the steps you took to get to your final CNN architecture and your reasoning at each step.  Describe why you think the architecture is suitable for the current problem.</p>
 <p><strong>Answer:</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>I feel the architecture is suitable for the current problem as ResNET solves the vanishing gradient problem while it maintains a very good performance. This also encourages to have a deeper Neural Network. 
+ResNET gives good results as it has many other advantages that add up too.</p>
 
 </div>
 </div>
@@ -13831,6 +13850,15 @@ The breed of dog is a Brittany
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The Husky was confused for an Alaskan Malamute but it is acceptable as they look similar. The Lhasa Apso was confused for a Silky Terrier but it is acceptable as they look similar.  While Welsh Springer Spaniel and Brittany were labelled correctly.</p>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
